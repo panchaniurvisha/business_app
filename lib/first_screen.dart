@@ -1,3 +1,4 @@
+import 'package:business_app/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 
 class FirstScreen extends StatefulWidget {
@@ -71,6 +72,7 @@ class _FirstScreenState extends State<FirstScreen> {
             TextButton(
               onPressed: () {
                 debugPrint("Second Screen");
+                Navigator.pushNamed(context, RoutesName.secondScreen);
               },
               child: Container(
                 margin: const EdgeInsets.symmetric(vertical: 20),

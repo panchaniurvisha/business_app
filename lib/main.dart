@@ -1,9 +1,5 @@
-//import 'package:business_app/first_screen.dart';
-//import 'package:business_app/second_screen.dart';
-
-import 'package:business_app/second_screen.dart';
-//import 'package:business_app/nine_screen.dart';
-//import 'package:business_app/ten_screen.dart';
+import 'package:business_app/routes/routes.dart';
+import 'package:business_app/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,11 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const SecondScreen());
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      // home: const SecondScreen(),
+      routes: appRoutes,
+      initialRoute: RoutesName.firstScreen,
+    );
   }
 }

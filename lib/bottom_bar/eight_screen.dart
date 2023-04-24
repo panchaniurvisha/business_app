@@ -111,8 +111,8 @@ class _EightScreenState extends State<EightScreen> {
                                             border: Border.all(
                                                 color: Colors.white,
                                                 width: 2,
-                                                strokeAlign:
-                                                    StrokeAlign.center),
+                                                strokeAlign: BorderSide
+                                                    .strokeAlignCenter),
                                             shape: BoxShape.circle,
                                             color: const Color(0xff9C3E2A)),
                                       ),
@@ -126,8 +126,8 @@ class _EightScreenState extends State<EightScreen> {
                                             border: Border.all(
                                                 color: Colors.white,
                                                 width: 2,
-                                                strokeAlign:
-                                                    StrokeAlign.center),
+                                                strokeAlign: BorderSide
+                                                    .strokeAlignCenter),
                                             shape: BoxShape.circle,
                                             color: const Color(0xff9C3E2A)),
                                       ),
@@ -141,8 +141,8 @@ class _EightScreenState extends State<EightScreen> {
                                             border: Border.all(
                                                 color: Colors.white,
                                                 width: 2,
-                                                strokeAlign:
-                                                    StrokeAlign.center),
+                                                strokeAlign: BorderSide
+                                                    .strokeAlignCenter),
                                             shape: BoxShape.circle,
                                             color: const Color(0xff9C3E2A)),
                                         child: const Padding(
@@ -311,54 +311,6 @@ class _EightScreenState extends State<EightScreen> {
             ],
           ),
         ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 3,
-        type: BottomNavigationBarType.fixed, // Fixed// <-- This works for fixed
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              "assets/images/Home.png",
-              height: 25,
-            ),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              "assets/images/Wallet.png",
-              height: 25,
-            ),
-            label: 'Save',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              "assets/images/Activity.png",
-              height: 25,
-            ),
-            label: 'Invest',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              "assets/images/Search.png",
-              height: 25,
-            ),
-            label: 'Explore',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              "assets/images/Profile.png",
-              height: 25,
-            ),
-            label: 'Profile',
-          ),
-        ],
-        selectedItemColor: const Color(0xff000000),
-        unselectedItemColor: const Color(0xff000000),
-        selectedIconTheme: const IconThemeData(color: Color(0xff000000)),
-
-        showUnselectedLabels: true,
-        showSelectedLabels: true,
-        iconSize: 30,
       ),
     ));
   }

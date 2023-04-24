@@ -10,12 +10,17 @@ class TenScreen extends StatefulWidget {
 }
 
 class _TenScreenState extends State<TenScreen> {
+  String dropdownvalue = 'Active';
+
+  // List of items in our dropdown menu
+  List<String> items = ["Active", "Deactive", "cancel", "Receive"];
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-            padding: const EdgeInsets.only(top: 30, left: 20),
+          padding: const EdgeInsets.only(top: 30, left: 20),
+          child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -26,6 +31,7 @@ class _TenScreenState extends State<TenScreen> {
                         padding: const EdgeInsets.only(right: 40),
                         onPressed: () {
                           debugPrint("First Screen-------->");
+                          Navigator.pop(context);
                         },
                         icon: const Icon(Icons.arrow_back_ios_new_sharp)),
                     const Padding(
@@ -55,23 +61,21 @@ class _TenScreenState extends State<TenScreen> {
                       padding: const EdgeInsets.only(right: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text("November Interest Boost",
-                              style: TextStyle(
-                                color: Color(0xff000000),
-                                fontWeight: FontWeight.w500,
-                                fontSize: 12,
-                                fontFamily: "Circular Std",
-                                fontStyle: FontStyle.normal,
-                              )),
-                          Text("Ends Feb 17, 2023",
-                              style: TextStyle(
-                                color: Color(0xff8C8A87),
-                                fontWeight: FontWeight.w500,
-                                fontSize: 12,
-                                fontFamily: "Circular Std",
-                                fontStyle: FontStyle.normal,
-                              )),
+                        children: [
+                          for (int index = 0; index < 2; index++)
+                            Text(
+                                index == 0
+                                    ? "November Interest Boost"
+                                    : "Ends Feb 17, 2023",
+                                style: TextStyle(
+                                  color: index == 0
+                                      ? const Color(0xff000000)
+                                      : const Color(0xff8C8A87),
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 12,
+                                  fontFamily: "Circular Std",
+                                  fontStyle: FontStyle.normal,
+                                )),
                         ],
                       ),
                     )
@@ -82,8 +86,9 @@ class _TenScreenState extends State<TenScreen> {
                   child: Divider(),
                 ),
                 Row(
-                  children: const [
-                    Text(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
                       "My Challenges",
                       style: TextStyle(
                         color: Color(0xff000000),
@@ -91,6 +96,38 @@ class _TenScreenState extends State<TenScreen> {
                         fontSize: 18,
                         fontFamily: "Circular Std",
                         fontStyle: FontStyle.normal,
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 5, horizontal: 15),
+                      margin: const EdgeInsets.only(right: 20),
+                      width: 110,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            color: const Color(0xffE1E3E6),
+                          ),
+                          borderRadius: BorderRadius.circular(30)),
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton(
+                          value: dropdownvalue,
+                          isExpanded: true,
+                          items: items.map((String items) {
+                            return DropdownMenuItem(
+                              value: items,
+                              child: Text(items,
+                                  style: const TextStyle(
+                                      fontSize: 14, color: Colors.black)),
+                            );
+                          }).toList(),
+                          onChanged: (value) {
+                            debugPrint(value.toString());
+
+                            dropdownvalue = value.toString();
+                            setState(() {});
+                          },
+                        ),
                       ),
                     ),
                   ],
@@ -127,9 +164,11 @@ class _TenScreenState extends State<TenScreen> {
                         fontFamily: "Circular Std",
                         fontStyle: FontStyle.normal,
                       )),
-                ),
+                )
               ],
-            )),
+            ),
+          ),
+        ),
       ),
     );
   }

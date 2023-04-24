@@ -166,55 +166,6 @@ class _NineScreenState extends State<NineScreen> {
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: 3,
-          type:
-              BottomNavigationBarType.fixed, // Fixed// <-- This works for fixed
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                "assets/images/Home.png",
-                height: 25,
-              ),
-              label: 'Home',
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                "assets/images/Wallet.png",
-                height: 25,
-              ),
-              label: 'Save',
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                "assets/images/Activity.png",
-                height: 25,
-              ),
-              label: 'Invest',
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                "assets/images/Search.png",
-                height: 25,
-              ),
-              label: 'Explore',
-            ),
-            BottomNavigationBarItem(
-              icon: Image.asset(
-                "assets/images/Profile.png",
-                height: 25,
-              ),
-              label: 'Profile',
-            ),
-          ],
-          selectedItemColor: const Color(0xff000000),
-          unselectedItemColor: const Color(0xff000000),
-          selectedIconTheme: const IconThemeData(color: Colors.blue),
-
-          showUnselectedLabels: true,
-          showSelectedLabels: true,
-          iconSize: 30,
-        ),
       ),
     );
   }

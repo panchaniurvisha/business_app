@@ -26,6 +26,7 @@ class _ElevenScreenState extends State<ElevenScreen> {
                         padding: const EdgeInsets.only(right: 40),
                         onPressed: () {
                           debugPrint("First Screen-------->");
+                          Navigator.pop(context);
                         },
                         icon: const Icon(Icons.arrow_back_ios_new_sharp)),
                     const SizedBox(

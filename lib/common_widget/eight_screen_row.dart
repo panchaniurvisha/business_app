@@ -16,7 +16,7 @@ class EightScreenRow extends StatelessWidget {
               style: const TextStyle(
                 color: Color(0xff000000),
                 fontWeight: FontWeight.w700,
-                fontSize: 14,
+                fontSize: 16,
                 fontFamily: "Circular Std",
                 fontStyle: FontStyle.normal,
               )),
@@ -26,7 +26,7 @@ class EightScreenRow extends StatelessWidget {
                 style: const TextStyle(
                   color: Color(0xffEE9136),
                   fontWeight: FontWeight.w500,
-                  fontSize: 12,
+                  fontSize: 14,
                   fontFamily: "Circular Std",
                   fontStyle: FontStyle.normal,
                 )),

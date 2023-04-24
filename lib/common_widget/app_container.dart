@@ -60,8 +60,8 @@ class AppContainer extends StatelessWidget {
                                   border: Border.all(
                                       color: index == 0
                                           ? const Color(0xffE0593D)
-                                          : Color(0xff6726BC),
-                                      strokeAlign: StrokeAlign.center,
+                                          : const Color(0xff6726BC),
+                                      strokeAlign: BorderSide.strokeAlignCenter,
                                       width: 2)),
                               child: const Padding(
                                 padding: EdgeInsets.symmetric(
