@@ -7,7 +7,7 @@ class AppTextFormField extends StatelessWidget {
   final String? labelText;
   final String? Function(String?)? validator;
   final TextEditingController? controller;
-  AppTextFormField(
+  const AppTextFormField(
       {Key? key,
       this.maxLength,
       this.controller,
@@ -20,12 +20,10 @@ class AppTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-
       obscureText: obscureText ?? false,
       maxLength: maxLength ?? 30,
-      controller: controller ,
+      controller: controller,
       autofocus: true,
-
       textInputAction: TextInputAction.done,
       decoration: InputDecoration(
         suffixIcon: suffixIcon ?? const SizedBox(),
@@ -51,8 +49,7 @@ class AppTextFormField extends StatelessWidget {
           ),
         ),
       ),
-      validator: validator ,
-
+      validator: validator,
     );
   }
 }
