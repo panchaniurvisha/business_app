@@ -5,16 +5,23 @@ import 'package:business_app/bottom_bar/nine_screen.dart';
 import 'package:business_app/bottom_bar/seven_screen.dart';
 import 'package:business_app/bottom_bar/six_screen.dart';
 import 'package:business_app/eleven_screen.dart';
-import 'package:business_app/first_screen.dart';
+import 'package:business_app/onboarding_first_screen.dart';
+import 'package:business_app/onboarding_second_screen.dart';
+import 'package:business_app/onboarding_third_screen.dart';
 import 'package:business_app/second_screen.dart';
 import 'package:business_app/ten_screen.dart';
 import 'package:business_app/third_screen.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../onboarding_screen.dart';
 import 'routes_name.dart';
 
 Map<String, WidgetBuilder> appRoutes = {
-  RoutesName.firstScreen: (context) => const FirstScreen(),
+  RoutesName.onBoardingScreen: (context) => const OnBoardingScreen(),
+  RoutesName.onBoardingFirstScreen: (context) => const OnBoardingFirstScreen(),
+  RoutesName.onBoardingSecondScreen: (context) =>
+      const OnBoardingSecondScreen(),
+  RoutesName.onBoardingThirdScreen: (context) => const OnBoardingThirdScreen(),
   RoutesName.secondScreen: (context) => const SecondScreen(),
   RoutesName.thirdScreen: (context) => const ThirdScreen(),
   RoutesName.fiveScreen: (context) => const FiveScreen(),

@@ -1,5 +1,8 @@
 class RoutesName {
-  static String firstScreen = "/";
+  static String onBoardingScreen = "/";
+  static String onBoardingFirstScreen = "/OnBoardingFirstScreen";
+  static String onBoardingSecondScreen = "/OnBoardingSecondScreen";
+  static String onBoardingThirdScreen = "/OnBoardingThirdScreen";
   static String secondScreen = "/SecondScreen";
   static String thirdScreen = "/ThirdScreen";
   static String fiveScreen = "/FiveScreen";
