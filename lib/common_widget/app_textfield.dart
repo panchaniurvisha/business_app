@@ -7,8 +7,7 @@ class AppTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-      autofocus: true,
-
+      autofocus: false,
       maxLength: 8,
       style: const TextStyle(
         color: Color(0xff8C8A87),
@@ -17,7 +16,6 @@ class AppTextField extends StatelessWidget {
         fontFamily: "Circular Std",
         fontStyle: FontStyle.normal,
       ),
-
       decoration: InputDecoration(
           counter: Container(),
           enabledBorder: const OutlineInputBorder(

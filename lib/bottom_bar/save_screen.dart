@@ -2,11 +2,11 @@ import 'package:business_app/common_widget/eight_screen_row.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
-class SixScreen extends StatefulWidget {
-  const SixScreen({Key? key}) : super(key: key);
+class SaveScreen extends StatefulWidget {
+  const SaveScreen({Key? key}) : super(key: key);
 
   @override
-  State<SixScreen> createState() => _SixScreenState();
+  State<SaveScreen> createState() => _SaveScreenState();
 }
 
 List<Map> information = [
@@ -32,7 +32,7 @@ List<Map> information = [
   }
 ];
 
-class _SixScreenState extends State<SixScreen> {
+class _SaveScreenState extends State<SaveScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -54,8 +54,8 @@ class _SixScreenState extends State<SixScreen> {
                         fontStyle: FontStyle.normal,
                       )),
                 ),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Text("you are saving",
                         style: TextStyle(
                           color: Color(0xff8C8A87),
@@ -87,9 +87,7 @@ class _SixScreenState extends State<SixScreen> {
                   child: Container(
                     height: 198,
                     width: 345,
-                    decoration: BoxDecoration(
-                        color: const Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.circular(25)),
+                    decoration: BoxDecoration(color: const Color(0xffFFFFFF), borderRadius: BorderRadius.circular(25)),
                     child: const Padding(
                       padding: EdgeInsets.only(top: 25, left: 12),
                       child: Text(
@@ -110,28 +108,18 @@ class _SixScreenState extends State<SixScreen> {
                 ),
                 GridView.builder(
                     itemCount: 4,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 10,
-                            mainAxisSpacing: 15,
-                            childAspectRatio: 1.3),
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 15, childAspectRatio: 1.3),
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) => Container(
-                          decoration: BoxDecoration(
-                              color: const Color(0xffFFFFFF),
-                              border:
-                                  Border.all(color: const Color(0xffE1E3E6)),
-                              borderRadius: BorderRadius.circular(15)),
+                          decoration: BoxDecoration(color: const Color(0xffFFFFFF), border: Border.all(color: const Color(0xffE1E3E6)), borderRadius: BorderRadius.circular(15)),
                           child: Padding(
                             padding: const EdgeInsets.all(12.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
                                       decoration: BoxDecoration(
@@ -142,8 +130,7 @@ class _SixScreenState extends State<SixScreen> {
                                                   ? const Color(0xff000000)
                                                   : index == 2
                                                       ? const Color(0xff83BA7F)
-                                                      : const Color(
-                                                          0xffEE9136)),
+                                                      : const Color(0xffEE9136)),
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Image.asset(
@@ -164,7 +151,7 @@ class _SixScreenState extends State<SixScreen> {
                                   ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 30),
+                                  padding: const EdgeInsets.only(top: 20),
                                   child: Text(information[index]["text"],
                                       style: const TextStyle(
                                         color: Color(0xff060606),
@@ -199,8 +186,7 @@ class _SixScreenState extends State<SixScreen> {
                       color: Colors.black,
                     ),
                     child: const Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 14, horizontal: 30),
+                      padding: EdgeInsets.symmetric(vertical: 14, horizontal: 30),
                       child: Text("Start saving",
                           style: TextStyle(
                             color: Color(0xffFFFFFF),

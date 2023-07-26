@@ -2,14 +2,14 @@ import 'package:business_app/common_widget/app_textform_field.dart';
 import 'package:business_app/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 
-class ThirdScreen extends StatefulWidget {
-  const ThirdScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<ThirdScreen> createState() => _ThirdScreenState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _ThirdScreenState extends State<ThirdScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   final formKey = GlobalKey<FormState>();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -21,7 +21,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
         child: SingleChildScrollView(
-          keyboardDismissBehavior:  ScrollViewKeyboardDismissBehavior.manual,
+          keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.manual,
           physics: const NeverScrollableScrollPhysics(),
           child: Form(
             autovalidateMode: AutovalidateMode.onUserInteraction,
@@ -48,18 +48,15 @@ class _ThirdScreenState extends State<ThirdScreen> {
                               : "Your email",
                       style: TextStyle(
                         height: index == 2 ? 8 : 0,
-                        color: index == 1
-                            ? const Color(0xff8C8A87)
-                            : const Color(0xff000000),
-                        fontWeight:
-                            index == 0 ? FontWeight.w700 : FontWeight.w500,
+                        color: index == 1 ? const Color(0xff8C8A87) : const Color(0xff000000),
+                        fontWeight: index == 0 ? FontWeight.w700 : FontWeight.w500,
                         fontSize: index == 0 ? 22 : 14,
                         fontFamily: "Circular Std",
                         fontStyle: FontStyle.normal,
                       )),
                 AppTextFormField(
                   controller: emailController,
-                  validator:  (value) {
+                  validator: (value) {
                     if (value!.isEmpty ||
                         /* !RegExp(r'^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$')
                                 .hasMatch(value)) {*/
@@ -81,9 +78,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                     )),
                 AppTextFormField(
                   suffixIcon: IconButton(
-                    icon: Icon(isSecurePassword
-                        ? Icons.visibility_off
-                        : Icons.visibility),
+                    icon: Icon(isSecurePassword ? Icons.visibility_off : Icons.visibility),
                     iconSize: 20,
                     color: const Color(0xff200E32),
                     onPressed: () {
@@ -97,9 +92,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                   controller: passwordController,
                   obscureText: isSecurePassword,
                   validator: (value) {
-                    if (value!.isEmpty ||
-                        !RegExp(r"(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)")
-                            .hasMatch(value)) {
+                    if (value!.isEmpty || !RegExp(r"(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)").hasMatch(value)) {
                       return "please  valid password";
                     }
                     return null;
@@ -111,8 +104,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                       onPressed: () {
                         if (formKey.currentState!.validate()) {
                           formKey.currentState!.validate();
-                          debugPrint(
-                              "validate ---> ${formKey.currentState!.validate()}");
+                          debugPrint("validate ---> ${formKey.currentState!.validate()}");
                           Navigator.pushNamedAndRemoveUntil(
                             context,
                             RoutesName.bottomScreen,
@@ -120,13 +112,8 @@ class _ThirdScreenState extends State<ThirdScreen> {
                           );
                           debugPrint('Bottom Screen ----->>');
                         }
-
                       },
-                      style: ElevatedButton.styleFrom(
-                          fixedSize: const Size(400, 60),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15)),
-                          backgroundColor: const Color(0xff000000)),
+                      style: ElevatedButton.styleFrom(fixedSize: const Size(400, 60), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)), backgroundColor: const Color(0xff000000)),
                       child: const Text(
                         "Log in",
                         style: TextStyle(fontSize: 18),
@@ -134,14 +121,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
                 ),
                 const Align(
                   alignment: Alignment.center,
-                  child: Text("Forgot Password?",
-                      style: TextStyle(
-                          color: Color(0xffEE9136),
-                          fontWeight: FontWeight.w700,
-                          fontSize: 14,
-                          fontFamily: "Circular Std",
-                          fontStyle: FontStyle.normal,
-                          decoration: TextDecoration.underline)),
+                  child: Text("Forgot Password?", style: TextStyle(color: Color(0xffEE9136), fontWeight: FontWeight.w700, fontSize: 14, fontFamily: "Circular Std", fontStyle: FontStyle.normal, decoration: TextDecoration.underline)),
                 ),
               ],
             ),

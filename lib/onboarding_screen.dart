@@ -52,16 +52,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 alignment: const Alignment(0, 0.45),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SmoothPageIndicator(
-                        controller: pageController,
-                        count: 3,
-                        effect: const SlideEffect(
-                            activeDotColor: Colors.black,
-                            dotColor: Colors.grey,
-                            dotHeight: 10,
-                            dotWidth: 10))
-                  ],
+                  children: [SmoothPageIndicator(controller: pageController, count: 3, effect: const SlideEffect(activeDotColor: Colors.black, dotColor: Colors.grey, dotHeight: 10, dotWidth: 10))],
                 )),
             onLastPage
                 ? Padding(
@@ -69,13 +60,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       horizontal: 10,
                     ).copyWith(bottom: 60),
                     child: ElevatedButton(
-                      onPressed: () => Navigator.pushNamedAndRemoveUntil(
-                          context, RoutesName.secondScreen, (route) => false),
+                      onPressed: () => Navigator.pushNamedAndRemoveUntil(context, RoutesName.signUpScreen, (route) => false),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black,
                         fixedSize: const Size(400, 55),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                       ),
                       child: const Text("Create an account",
                           style: TextStyle(
@@ -92,14 +81,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       horizontal: 10,
                     ).copyWith(bottom: 60),
                     child: ElevatedButton(
-                      onPressed: () => pageController.nextPage(
-                          duration: const Duration(milliseconds: 500),
-                          curve: Curves.easeIn),
+                      onPressed: () => pageController.nextPage(duration: const Duration(milliseconds: 500), curve: Curves.easeIn),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black,
                         fixedSize: const Size(400, 55),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                       ),
                       child: const Text("Create an account",
                           style: TextStyle(
@@ -124,8 +110,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       fontStyle: FontStyle.normal,
                     )),
                 InkWell(
-                  onTap: () => Navigator.pushNamedAndRemoveUntil(
-                      context, RoutesName.thirdScreen, (route) => false),
+                  onTap: () => Navigator.pushNamedAndRemoveUntil(context, RoutesName.loginScreen, (route) => false),
                   child: const Text("Log In",
                       style: TextStyle(
                         height: 8,

@@ -3,14 +3,14 @@ class RoutesName {
   static String onBoardingFirstScreen = "/OnBoardingFirstScreen";
   static String onBoardingSecondScreen = "/OnBoardingSecondScreen";
   static String onBoardingThirdScreen = "/OnBoardingThirdScreen";
-  static String secondScreen = "/SecondScreen";
-  static String thirdScreen = "/ThirdScreen";
-  static String fiveScreen = "/FiveScreen";
-  static String sixScreen = "/SixScreen";
-  static String sevenScreen = "/SevenScreen";
-  static String eightScreen = "/EightScreen";
-  static String nineScreen = "NineScreen";
-  static String tenScreen = "/TenScreen";
-  static String elevenScreen = "/ElevenScreen";
+  static String signUpScreen = "/SignUpScreen";
+  static String loginScreen = "/LoginScreen";
+  static String homeScreen = "/HomeScreen";
+  static String saveScreen = "/SaveScreen";
+  static String investScreen = "/InvestScreen";
+  static String exploreScreen = "/ExploreScreen";
+  static String profileScreen = "ProfileScreen";
+  static String challengesScreen = "/ChallengesScreen";
+  static String assetsScreen = "/AssetsScreen";
   static String bottomScreen = "/BottomScreen";
 }

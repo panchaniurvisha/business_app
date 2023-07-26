@@ -3,11 +3,11 @@ import 'package:business_app/routes/routes_name.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 
-class SevenScreen extends StatefulWidget {
-  const SevenScreen({Key? key}) : super(key: key);
+class InvestScreen extends StatefulWidget {
+  const InvestScreen({Key? key}) : super(key: key);
 
   @override
-  State<SevenScreen> createState() => _SevenScreenState();
+  State<InvestScreen> createState() => _InvestScreenState();
 }
 
 List<Map> information = [
@@ -33,7 +33,7 @@ List<Map> information = [
   }
 ];
 
-class _SevenScreenState extends State<SevenScreen> {
+class _InvestScreenState extends State<InvestScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -58,12 +58,9 @@ class _SevenScreenState extends State<SevenScreen> {
                 Row(
                   children: [
                     for (int index = 0; index < 2; index++)
-                      Text(
-                          index == 0 ? "Your portfolio is  today" : " up +\$55",
+                      Text(index == 0 ? "Your portfolio is  today" : " up +\$55",
                           style: TextStyle(
-                            color: index == 0
-                                ? const Color(0xff8C8A87)
-                                : const Color(0xff499743),
+                            color: index == 0 ? const Color(0xff8C8A87) : const Color(0xff499743),
                             fontWeight: FontWeight.w500,
                             fontSize: 14,
                             fontFamily: "Circular Std",
@@ -82,9 +79,7 @@ class _SevenScreenState extends State<SevenScreen> {
                   child: Container(
                     height: 198,
                     width: 345,
-                    decoration: BoxDecoration(
-                        color: const Color(0xffFFFFFF),
-                        borderRadius: BorderRadius.circular(25)),
+                    decoration: BoxDecoration(color: const Color(0xffFFFFFF), borderRadius: BorderRadius.circular(25)),
                     child: const Padding(
                       padding: EdgeInsets.only(top: 25, left: 12),
                       child: Text(
@@ -105,28 +100,18 @@ class _SevenScreenState extends State<SevenScreen> {
                 ),
                 GridView.builder(
                     itemCount: 4,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 10,
-                            mainAxisSpacing: 15,
-                            childAspectRatio: 1.3),
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 15, childAspectRatio: 1.3),
                     shrinkWrap: true,
                     physics: const NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) => Container(
-                          decoration: BoxDecoration(
-                              color: const Color(0xffFFFFFF),
-                              border:
-                                  Border.all(color: const Color(0xffE1E3E6)),
-                              borderRadius: BorderRadius.circular(15)),
+                          decoration: BoxDecoration(color: const Color(0xffFFFFFF), border: Border.all(color: const Color(0xffE1E3E6)), borderRadius: BorderRadius.circular(15)),
                           child: Padding(
                             padding: const EdgeInsets.all(10.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Container(
                                       decoration: BoxDecoration(
@@ -137,8 +122,7 @@ class _SevenScreenState extends State<SevenScreen> {
                                                   ? const Color(0xffB82F80)
                                                   : index == 2
                                                       ? const Color(0xff4538EC)
-                                                      : const Color(
-                                                          0xff4E9CCE)),
+                                                      : const Color(0xff4E9CCE)),
                                       child: Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Image.asset(
@@ -159,7 +143,7 @@ class _SevenScreenState extends State<SevenScreen> {
                                   ],
                                 ),
                                 Padding(
-                                    padding: const EdgeInsets.only(top: 30),
+                                    padding: const EdgeInsets.only(top: 28),
                                     child: Text(information[index]["text"],
                                         style: const TextStyle(
                                           color: Color(0xff060606),
@@ -173,7 +157,7 @@ class _SevenScreenState extends State<SevenScreen> {
                                   style: const TextStyle(
                                     color: Color(0xff8C8A87),
                                     fontWeight: FontWeight.w500,
-                                    fontSize: 13,
+                                    fontSize: 12,
                                     fontFamily: "Circular Std",
                                     fontStyle: FontStyle.normal,
                                   ),
@@ -185,7 +169,7 @@ class _SevenScreenState extends State<SevenScreen> {
                 InkWell(
                   onTap: () {
                     debugPrint("Start investing");
-                    Navigator.pushNamed(context, RoutesName.tenScreen);
+                    Navigator.pushNamed(context, RoutesName.challengesScreen);
                   },
                   child: Container(
                     margin: const EdgeInsets.only(top: 20),
@@ -194,8 +178,7 @@ class _SevenScreenState extends State<SevenScreen> {
                       color: Colors.black,
                     ),
                     child: const Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 14, horizontal: 30),
+                      padding: EdgeInsets.symmetric(vertical: 14, horizontal: 30),
                       child: Text("Start investing",
                           style: TextStyle(
                             color: Color(0xffFFFFFF),

@@ -2,14 +2,14 @@ import 'package:business_app/common_widget/app_container.dart';
 import 'package:business_app/common_widget/eight_screen_row.dart';
 import 'package:flutter/material.dart';
 
-class TenScreen extends StatefulWidget {
-  const TenScreen({Key? key}) : super(key: key);
+class ChallengesScreen extends StatefulWidget {
+  const ChallengesScreen({Key? key}) : super(key: key);
 
   @override
-  State<TenScreen> createState() => _TenScreenState();
+  State<ChallengesScreen> createState() => _ChallengesScreenState();
 }
 
-class _TenScreenState extends State<TenScreen> {
+class _ChallengesScreenState extends State<ChallengesScreen> {
   String dropdownvalue = 'Active';
 
   // List of items in our dropdown menu
@@ -36,8 +36,7 @@ class _TenScreenState extends State<TenScreen> {
                         icon: const Icon(Icons.arrow_back_ios_new_sharp)),
                     const Padding(
                       padding: EdgeInsets.only(right: 20),
-                      child: Icon(Icons.error_outline,
-                          size: 30, color: Color(0xffEE9136)),
+                      child: Icon(Icons.error_outline, size: 30, color: Color(0xffEE9136)),
                     ),
                   ],
                 ),
@@ -63,14 +62,9 @@ class _TenScreenState extends State<TenScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           for (int index = 0; index < 2; index++)
-                            Text(
-                                index == 0
-                                    ? "November Interest Boost"
-                                    : "Ends Feb 17, 2023",
+                            Text(index == 0 ? "November Interest Boost" : "Ends Feb 17, 2023",
                                 style: TextStyle(
-                                  color: index == 0
-                                      ? const Color(0xff000000)
-                                      : const Color(0xff8C8A87),
+                                  color: index == 0 ? const Color(0xff000000) : const Color(0xff8C8A87),
                                   fontWeight: FontWeight.w500,
                                   fontSize: 12,
                                   fontFamily: "Circular Std",
@@ -99,8 +93,7 @@ class _TenScreenState extends State<TenScreen> {
                       ),
                     ),
                     Container(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 5, horizontal: 15),
+                      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
                       margin: const EdgeInsets.only(right: 20),
                       width: 110,
                       height: 40,
@@ -116,9 +109,7 @@ class _TenScreenState extends State<TenScreen> {
                           items: items.map((String items) {
                             return DropdownMenuItem(
                               value: items,
-                              child: Text(items,
-                                  style: const TextStyle(
-                                      fontSize: 14, color: Colors.black)),
+                              child: Text(items, style: const TextStyle(fontSize: 14, color: Colors.black)),
                             );
                           }).toList(),
                           onChanged: (value) {
@@ -136,8 +127,7 @@ class _TenScreenState extends State<TenScreen> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(100.0),
-                      child: Image.asset("assets/images/leather_wallet.png",
-                          height: 100),
+                      child: Image.asset("assets/images/leather_wallet.png", height: 100),
                     ),
                     Positioned(
                       left: 90,
@@ -148,8 +138,7 @@ class _TenScreenState extends State<TenScreen> {
                         },
                         backgroundColor: const Color(0xffE1E1E1),
                         mini: true,
-                        child: const Icon(Icons.add_rounded,
-                            size: 30, color: Color(0xff000000)),
+                        child: const Icon(Icons.add_rounded, size: 30, color: Color(0xff000000)),
                       ),
                     ),
                   ],

@@ -1,8 +1,8 @@
-import 'package:business_app/bottom_bar/eight_screen.dart';
-import 'package:business_app/bottom_bar/five_screen.dart';
-import 'package:business_app/bottom_bar/nine_screen.dart';
-import 'package:business_app/bottom_bar/seven_screen.dart';
-import 'package:business_app/bottom_bar/six_screen.dart';
+import 'package:business_app/bottom_bar/explore_screen.dart';
+import 'package:business_app/bottom_bar/home_screen.dart';
+import 'package:business_app/bottom_bar/invest_screen.dart';
+import 'package:business_app/bottom_bar/profile_screen.dart';
+import 'package:business_app/bottom_bar/save_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomScreen extends StatefulWidget {
@@ -15,11 +15,11 @@ class BottomScreen extends StatefulWidget {
 class _BottomScreenState extends State<BottomScreen> {
   int currentIndex = 0;
   final List<Widget> listOfScreen = [
-    const FiveScreen(),
-    const SixScreen(),
-    const SevenScreen(),
-    const EightScreen(),
-    const NineScreen(),
+    const HomeScreen(),
+    const SaveScreen(),
+    const InvestScreen(),
+    const ExploreScreen(),
+    const ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -27,8 +27,7 @@ class _BottomScreenState extends State<BottomScreen> {
       child: Scaffold(
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: currentIndex,
-          type:
-              BottomNavigationBarType.fixed, // Fixed// <-- This works for fixed
+          type: BottomNavigationBarType.fixed, // Fixed// <-- This works for fixed
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Image.asset(

@@ -4,14 +4,14 @@ import 'package:business_app/common_widget/five_screen_raw.dart';
 import 'package:business_app/routes/routes_name.dart';
 import 'package:flutter/material.dart';
 
-class FiveScreen extends StatefulWidget {
-  const FiveScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
-  State<FiveScreen> createState() => _FiveScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _FiveScreenState extends State<FiveScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   List<Map> data = [
     {"image": "assets/images/comet.png", "number": "0", "name": "Streaks"},
     {"image": "assets/images/badge.png", "number": "8", "name": "badges"},
@@ -39,12 +39,10 @@ class _FiveScreenState extends State<FiveScreen> {
                           fontStyle: FontStyle.normal,
                         )),
                     Image.asset("assets/images/Rocket.png", height: 25),
+                    const Spacer(),
                     Container(
-                      margin: const EdgeInsets.only(left: 100, right: 10),
                       height: 34,
-                      decoration: BoxDecoration(
-                          color: const Color(0xffFCEFDD),
-                          borderRadius: BorderRadius.circular(20)),
+                      decoration: BoxDecoration(color: const Color(0xffFCEFDD), borderRadius: BorderRadius.circular(20)),
                       child: const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Text("Win \$100",
@@ -57,8 +55,7 @@ class _FiveScreenState extends State<FiveScreen> {
                             )),
                       ),
                     ),
-                    Image.asset("assets/images/Notification_icon.png",
-                        height: 25),
+                    Image.asset("assets/images/Notification_icon.png", height: 25),
                   ],
                 ),
                 SizedBox(
@@ -73,19 +70,14 @@ class _FiveScreenState extends State<FiveScreen> {
                     itemBuilder: (context, index) => Container(
                       margin: const EdgeInsets.only(top: 50, bottom: 30),
                       width: 360,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(25),
-                          border: Border.all(
-                              color: const Color(0xffE1E3E6), width: 2),
-                          color: const Color(0xffFFFFFF)),
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(25), border: Border.all(color: const Color(0xffE1E3E6), width: 2), color: const Color(0xffFFFFFF)),
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 20, horizontal: 20),
+                        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Row(
-                              children: const [
+                            const Row(
+                              children: [
                                 Text("Funding balance  ",
                                     style: TextStyle(
                                       color: Color(0xff8C8A87),
@@ -94,16 +86,15 @@ class _FiveScreenState extends State<FiveScreen> {
                                       fontFamily: "Circular Std",
                                       fontStyle: FontStyle.normal,
                                     )),
-                                Icon(Icons.visibility_outlined,
-                                    color: Color(0xff200E32)),
+                                Icon(Icons.visibility_outlined, color: Color(0xff200E32)),
                               ],
                             ),
                             Row(
                               children: [
-                                Column(
+                                const Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    const Text("\$80,000.47",
+                                    Text("\$80,000.47",
                                         style: TextStyle(
                                           color: Color(0xff000000),
                                           fontWeight: FontWeight.w700,
@@ -112,7 +103,7 @@ class _FiveScreenState extends State<FiveScreen> {
                                           fontStyle: FontStyle.normal,
                                         )),
                                     Row(
-                                      children: const [
+                                      children: [
                                         Text("\$20,000 uninvested cash  ",
                                             style: TextStyle(
                                               color: Color(0xff8C8A87),
@@ -148,8 +139,7 @@ class _FiveScreenState extends State<FiveScreen> {
                             Padding(
                               padding: const EdgeInsets.only(top: 20),
                               child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   const FiveScreenContainer(
                                     text: "Deposite",
@@ -172,9 +162,9 @@ class _FiveScreenState extends State<FiveScreen> {
                     ),
                   ),
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     Icon(Icons.circle_rounded, size: 10),
                     SizedBox(
                       width: 5,
@@ -199,16 +189,10 @@ class _FiveScreenState extends State<FiveScreen> {
                     shrinkWrap: true,
                     itemBuilder: (context, index) => Container(
                         width: 166,
-                        decoration: BoxDecoration(
-                            color: const Color(0xffFFFFFF),
-                            border: Border.all(color: const Color(0xffE1E3E6)),
-                            borderRadius: BorderRadius.circular(15)),
+                        decoration: BoxDecoration(color: const Color(0xffFFFFFF), border: Border.all(color: const Color(0xffE1E3E6)), borderRadius: BorderRadius.circular(15)),
                         child: Row(
                           children: [
-                            Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Image.asset(data[index]["image"],
-                                    height: 40)),
+                            Padding(padding: const EdgeInsets.all(8.0), child: Image.asset(data[index]["image"], height: 40)),
                             Padding(
                               padding: const EdgeInsets.only(top: 15),
                               child: Column(
@@ -281,7 +265,7 @@ class _FiveScreenState extends State<FiveScreen> {
               InkWell(
                 onTap: () {
                   debugPrint("Eleven Screen------>");
-                  Navigator.pushNamed(context, RoutesName.elevenScreen);
+                  Navigator.pushNamed(context, RoutesName.assetsScreen);
                 },
                 child: const FiveScreenContainer(
                   text: "Send Money",

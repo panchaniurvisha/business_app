@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ElevenScreen extends StatefulWidget {
-  const ElevenScreen({Key? key}) : super(key: key);
+class AssetsScreen extends StatefulWidget {
+  const AssetsScreen({Key? key}) : super(key: key);
 
   @override
-  State<ElevenScreen> createState() => _ElevenScreenState();
+  State<AssetsScreen> createState() => _AssetsScreenState();
 }
 
-class _ElevenScreenState extends State<ElevenScreen> {
+class _AssetsScreenState extends State<AssetsScreen> {
   TextEditingController searchController = TextEditingController();
   @override
   Widget build(BuildContext context) {
@@ -50,11 +50,9 @@ class _ElevenScreenState extends State<ElevenScreen> {
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.symmetric(vertical: 10),
                     fillColor: Color(0xffFCEFDD),
-                    prefixIcon:
-                        Icon(Icons.search_rounded, color: Color(0x99000000)),
+                    prefixIcon: Icon(Icons.search_rounded, color: Color(0x99000000)),
                     enabledBorder: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(width: 2, color: Colors.transparent),
+                      borderSide: BorderSide(width: 2, color: Colors.transparent),
                       borderRadius: BorderRadius.all(
                         Radius.circular(15),
                       ),
@@ -85,9 +83,7 @@ class _ElevenScreenState extends State<ElevenScreen> {
                     itemCount: 5,
                     itemBuilder: (context, index) => Container(
                       height: 87,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: const Color(0xffE1E3E6))),
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), border: Border.all(color: const Color(0xffE1E3E6))),
                       child: Row(
                         children: [
                           Padding(
@@ -96,9 +92,9 @@ class _ElevenScreenState extends State<ElevenScreen> {
                               "assets/images/bitcoin.png",
                             ),
                           ),
-                          Column(
+                          const Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
+                            children: [
                               Text("\$19,311.59",
                                   style: TextStyle(
                                     color: Color(0xff000000),
@@ -131,8 +127,7 @@ class _ElevenScreenState extends State<ElevenScreen> {
                         ],
                       ),
                     ),
-                    separatorBuilder: (context, index) =>
-                        const SizedBox(height: 30),
+                    separatorBuilder: (context, index) => const SizedBox(height: 30),
                   ),
                 ),
               ],

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class NineScreen extends StatefulWidget {
-  const NineScreen({Key? key}) : super(key: key);
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({Key? key}) : super(key: key);
 
   @override
-  State<NineScreen> createState() => _NineScreenState();
+  State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
 List<String> data = ["Streaks", "Badge", "Crewcoins", "Current League"];
 
-class _NineScreenState extends State<NineScreen> {
+class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -19,11 +19,11 @@ class _NineScreenState extends State<NineScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Text("Profile",
                         style: TextStyle(
                           color: Color(0xff000000),
@@ -45,17 +45,16 @@ class _NineScreenState extends State<NineScreen> {
                   children: [
                     Container(
                         margin: const EdgeInsets.only(right: 15),
-                        decoration: const BoxDecoration(
-                            color: Color(0xffD9D9D9), shape: BoxShape.circle),
+                        decoration: const BoxDecoration(color: Color(0xffD9D9D9), shape: BoxShape.circle),
                         child: Image.asset(
                           "assets/images/profile_boy.png",
                           height: 75,
                         )),
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
-                          children: const [
+                          children: [
                             Text("Feranmi Ladapo",
                                 style: TextStyle(
                                   color: Color(0xff000000),
@@ -67,7 +66,7 @@ class _NineScreenState extends State<NineScreen> {
                             Icon(Icons.verified, size: 20),
                           ],
                         ),
-                        const Text("@sirbenj",
+                        Text("@sirbenj",
                             style: TextStyle(
                               color: Color(0xff8C8A87),
                               fontWeight: FontWeight.w700,
@@ -79,10 +78,7 @@ class _NineScreenState extends State<NineScreen> {
                     ),
                     const Spacer(),
                     Container(
-                        decoration: BoxDecoration(
-                            color: const Color(0xffFFFFFF),
-                            shape: BoxShape.circle,
-                            border: Border.all(color: const Color(0xffE1E3E6))),
+                        decoration: BoxDecoration(color: const Color(0xffFFFFFF), shape: BoxShape.circle, border: Border.all(color: const Color(0xffE1E3E6))),
                         child: Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: Image.asset(
@@ -112,18 +108,11 @@ class _NineScreenState extends State<NineScreen> {
               GridView.builder(
                 padding: const EdgeInsets.all(20),
                 itemCount: 4,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 15,
-                    childAspectRatio: 2.5),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 10, mainAxisSpacing: 15, childAspectRatio: 2.5),
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) => Container(
-                    decoration: BoxDecoration(
-                        color: const Color(0xffFFFFFF),
-                        border: Border.all(color: const Color(0xffE1E3E6)),
-                        borderRadius: BorderRadius.circular(15)),
+                    decoration: BoxDecoration(color: const Color(0xffFFFFFF), border: Border.all(color: const Color(0xffE1E3E6)), borderRadius: BorderRadius.circular(15)),
                     child: Row(
                       children: [
                         Padding(
@@ -133,8 +122,7 @@ class _NineScreenState extends State<NineScreen> {
                                   height: 40,
                                   width: 35,
                                 )
-                              : Image.asset("assets/images/comet.png",
-                                  height: 40),
+                              : Image.asset("assets/images/comet.png", height: 40),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 20),

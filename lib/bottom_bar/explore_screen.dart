@@ -2,14 +2,14 @@ import 'package:business_app/common_widget/app_container.dart';
 import 'package:business_app/common_widget/eight_screen_row.dart';
 import 'package:flutter/material.dart';
 
-class EightScreen extends StatefulWidget {
-  const EightScreen({Key? key}) : super(key: key);
+class ExploreScreen extends StatefulWidget {
+  const ExploreScreen({Key? key}) : super(key: key);
 
   @override
-  State<EightScreen> createState() => _EightScreenState();
+  State<ExploreScreen> createState() => _ExploreScreenState();
 }
 
-class _EightScreenState extends State<EightScreen> {
+class _ExploreScreenState extends State<ExploreScreen> {
   TextEditingController searchController = TextEditingController();
   List<String> data = [
     "BTC",
@@ -34,11 +34,9 @@ class _EightScreenState extends State<EightScreen> {
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.symmetric(vertical: 10),
                     fillColor: Color(0xffFCEFDD),
-                    prefixIcon:
-                        Icon(Icons.search_rounded, color: Color(0x99000000)),
+                    prefixIcon: Icon(Icons.search_rounded, color: Color(0x99000000)),
                     enabledBorder: OutlineInputBorder(
-                      borderSide:
-                          BorderSide(width: 2, color: Colors.transparent),
+                      borderSide: BorderSide(width: 2, color: Colors.transparent),
                       borderRadius: BorderRadius.all(
                         Radius.circular(15),
                       ),
@@ -94,9 +92,7 @@ class _EightScreenState extends State<EightScreen> {
                                 Stack(
                                   children: [
                                     Container(
-                                      decoration: const BoxDecoration(
-                                          color: Color(0xffFFFFFF),
-                                          shape: BoxShape.circle),
+                                      decoration: const BoxDecoration(color: Color(0xffFFFFFF), shape: BoxShape.circle),
                                       child: Image.asset(
                                         "assets/images/boy.png",
                                         height: 30,
@@ -107,14 +103,7 @@ class _EightScreenState extends State<EightScreen> {
                                       child: Container(
                                         height: 30,
                                         width: 30,
-                                        decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: Colors.white,
-                                                width: 2,
-                                                strokeAlign: BorderSide
-                                                    .strokeAlignCenter),
-                                            shape: BoxShape.circle,
-                                            color: const Color(0xff9C3E2A)),
+                                        decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 2, strokeAlign: BorderSide.strokeAlignCenter), shape: BoxShape.circle, color: const Color(0xff9C3E2A)),
                                       ),
                                     ),
                                     Padding(
@@ -122,14 +111,7 @@ class _EightScreenState extends State<EightScreen> {
                                       child: Container(
                                         height: 30,
                                         width: 30,
-                                        decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: Colors.white,
-                                                width: 2,
-                                                strokeAlign: BorderSide
-                                                    .strokeAlignCenter),
-                                            shape: BoxShape.circle,
-                                            color: const Color(0xff9C3E2A)),
+                                        decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 2, strokeAlign: BorderSide.strokeAlignCenter), shape: BoxShape.circle, color: const Color(0xff9C3E2A)),
                                       ),
                                     ),
                                     Padding(
@@ -137,17 +119,9 @@ class _EightScreenState extends State<EightScreen> {
                                       child: Container(
                                         height: 30,
                                         width: 30,
-                                        decoration: BoxDecoration(
-                                            border: Border.all(
-                                                color: Colors.white,
-                                                width: 2,
-                                                strokeAlign: BorderSide
-                                                    .strokeAlignCenter),
-                                            shape: BoxShape.circle,
-                                            color: const Color(0xff9C3E2A)),
+                                        decoration: BoxDecoration(border: Border.all(color: Colors.white, width: 2, strokeAlign: BorderSide.strokeAlignCenter), shape: BoxShape.circle, color: const Color(0xff9C3E2A)),
                                         child: const Padding(
-                                          padding: EdgeInsets.symmetric(
-                                              vertical: 8, horizontal: 8),
+                                          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                                           child: Text("+5",
                                               style: TextStyle(
                                                 color: Color(0xffFFFFFF),
@@ -172,8 +146,7 @@ class _EightScreenState extends State<EightScreen> {
                                   fontFamily: "Circular Std",
                                   fontStyle: FontStyle.normal,
                                 )),
-                            const Text(
-                                "These are the magic assets of the next jaga...",
+                            const Text("These are the magic assets of the next jaga...",
                                 style: TextStyle(
                                   color: Color(0xff8C8A87),
                                   fontWeight: FontWeight.w500,
@@ -196,8 +169,7 @@ class _EightScreenState extends State<EightScreen> {
                                         fontStyle: FontStyle.normal,
                                       )),
                                   IconButton(
-                                      padding: const EdgeInsets.only(
-                                          left: 160, right: 5),
+                                      padding: const EdgeInsets.only(left: 160, right: 5),
                                       iconSize: 25,
                                       onPressed: () {
                                         debugPrint("heart is red");
@@ -236,9 +208,7 @@ class _EightScreenState extends State<EightScreen> {
                   itemCount: 4,
                   itemBuilder: (context, index) => Container(
                     width: 140,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: const Color(0xffE1E3E6))),
+                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all(color: const Color(0xffE1E3E6))),
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Column(
@@ -252,12 +222,9 @@ class _EightScreenState extends State<EightScreen> {
                                 height: 35,
                               ),
                               Container(
-                                decoration: BoxDecoration(
-                                    color: const Color(0xffEAEBED),
-                                    borderRadius: BorderRadius.circular(20)),
+                                decoration: BoxDecoration(color: const Color(0xffEAEBED), borderRadius: BorderRadius.circular(20)),
                                 child: const Padding(
-                                  padding: EdgeInsets.symmetric(
-                                      vertical: 4, horizontal: 10),
+                                  padding: EdgeInsets.symmetric(vertical: 4, horizontal: 10),
                                   child: Text("Crypto",
                                       style: TextStyle(
                                         color: Color(0xff8C8A87),
@@ -283,9 +250,7 @@ class _EightScreenState extends State<EightScreen> {
                                       : index == 3
                                           ? const Color(0xff58B757)
                                           : const Color(0xff000000),
-                                  fontWeight: index == 0
-                                      ? FontWeight.w700
-                                      : FontWeight.w500,
+                                  fontWeight: index == 0 ? FontWeight.w700 : FontWeight.w500,
                                   fontSize: index == 0
                                       ? 16
                                       : index == 2
@@ -298,8 +263,7 @@ class _EightScreenState extends State<EightScreen> {
                       ),
                     ),
                   ),
-                  separatorBuilder: (context, index) =>
-                      const SizedBox(width: 10),
+                  separatorBuilder: (context, index) => const SizedBox(width: 10),
                 ),
               ),
               const EightScreenRow(
