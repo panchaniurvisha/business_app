@@ -16,7 +16,7 @@ class _AssetsScreenState extends State<AssetsScreen> {
         body: SingleChildScrollView(
           physics: const AlwaysScrollableScrollPhysics(),
           child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 20),
+            padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -50,9 +50,11 @@ class _AssetsScreenState extends State<AssetsScreen> {
                   decoration: const InputDecoration(
                     contentPadding: EdgeInsets.symmetric(vertical: 10),
                     fillColor: Color(0xffFCEFDD),
-                    prefixIcon: Icon(Icons.search_rounded, color: Color(0x99000000)),
+                    prefixIcon:
+                        Icon(Icons.search_rounded, color: Color(0x99000000)),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(width: 2, color: Colors.transparent),
+                      borderSide:
+                          BorderSide(width: 2, color: Colors.transparent),
                       borderRadius: BorderRadius.all(
                         Radius.circular(15),
                       ),
@@ -83,7 +85,9 @@ class _AssetsScreenState extends State<AssetsScreen> {
                     itemCount: 5,
                     itemBuilder: (context, index) => Container(
                       height: 87,
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), border: Border.all(color: const Color(0xffE1E3E6))),
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15),
+                          border: Border.all(color: const Color(0xffE1E3E6))),
                       child: Row(
                         children: [
                           Padding(
@@ -127,7 +131,8 @@ class _AssetsScreenState extends State<AssetsScreen> {
                         ],
                       ),
                     ),
-                    separatorBuilder: (context, index) => const SizedBox(height: 30),
+                    separatorBuilder: (context, index) =>
+                        const SizedBox(height: 30),
                   ),
                 ),
               ],

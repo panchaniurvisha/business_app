@@ -33,9 +33,9 @@ class _OnBoardingFirstScreenState extends State<OnBoardingFirstScreen> {
               Text(text[index].toString(),
                   style: TextStyle(
                     height: index == 0
-                        ? 2
+                        ? 1.5
                         : index == 2
-                            ? 10
+                            ? 12
                             : 0,
                     color: index == 0
                         ? const Color(0xff000000)
